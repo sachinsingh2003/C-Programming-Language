@@ -1,0 +1,41 @@
+// locate character in string
+// char* my_strchr ( char *p, char ch );
+
+
+#include<stdio.h>
+#include<string.h>
+void print_string(char *);
+char * my_strchr(char *p,char ch)
+{
+	if(*p == ch)
+		return p;
+	else
+		return 0;
+	my_strchr(p+1,ch);
+}
+void main()
+{
+	char s[20],ch;
+	printf("Enter the string :\n");
+	scanf("%[^\n]",s);
+
+	printf("Enter the char to locate :\n");
+	scanf(" %c",ch);
+
+	print_string(s);
+	
+	char *p;
+	p = my_strchr(s,ch);
+	if(p==0)
+		printf("Char not found\n");
+	else
+		printf("Char fount\n");
+}
+void print_string(char *str)
+{
+
+	printf("String :");
+	
+	printf("%s ",str);
+	printf("\n");
+}
