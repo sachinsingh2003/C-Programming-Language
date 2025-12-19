@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+	int i,j,k;
+	char ch='E';
+	for(i=0;i<5;i++,ch--)
+	{	
+		for(j=0;j<i;j++)
+		{
+			printf(" * ");
+		}	
+
+		for(k=0;k<5-i;k++,ch--)
+		{
+			printf(" %c ",ch);
+		}
+		ch= 'E'-i;
+		printf("\n");
+	}
+
+}
